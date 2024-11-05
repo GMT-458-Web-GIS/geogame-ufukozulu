@@ -20,9 +20,9 @@ To run the project locally, follow these steps:
 ## Project Structure
 plaintext
 GeoQuest/
-├── index.html       # Main HTML file
-├── style.css        # Stylesheet
-├── app.js           # JavaScript file
+├── index.html       # Main HTML file <br>
+├── style.css        # Stylesheet <br>
+├── app.js           # JavaScript file <br>
 └── icons        # Treasure icon
 
 ## Usage
