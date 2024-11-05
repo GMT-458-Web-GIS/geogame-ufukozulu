@@ -18,8 +18,8 @@ Installation
 To run the project locally, follow these steps:
 
 ## Project Structure
-plaintext
-GeoQuest/
+plaintext<br>
+GeoQuest/ <br>
 ├── index.html       # Main HTML file <br>
 ├── style.css        # Stylesheet <br>
 ├── app.js           # JavaScript file <br>
