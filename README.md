@@ -13,7 +13,6 @@
   ```javascript
   button.onclick = () => checkAnswer(index, questionData.answer);
   ```
-- **Purpose**: Validates the selected answer and updates the gameplay progression based on correctness.
 
 ### 2. Map Interactions
 - **Event Trigger**: Clicking on the map during the final stage directs the player's movement.
@@ -24,8 +23,6 @@
       moveMarker(playerMarker, targetLocation, playerSpeed, checkProximity);
   });
   ```
-- **Purpose**: Allows players to navigate the map interactively by setting a target location.
-
 ### 3. Timer Countdown
 - **Event Trigger**: A timer event updates every second during the final stage.
 - **Code Example**:
@@ -39,7 +36,6 @@
       }
   }, 1000);
   ```
-- **Purpose**: Maintains a sense of urgency and determines the success or failure of the stage.
 
 ## Benefits of Using Closures
 - Closures provided modular state management for various dynamic functionalities.
@@ -75,7 +71,7 @@
 - **Key Contributions**:
   - Suggested modular implementations for question loading and map interaction.
   - Provided efficient methods for event handling and routing optimizations.
-- **URL of Interaction**: [Chat link]([https://openai.com/](https://chatgpt.com/share/6755f1ce-32e0-800d-93ef-dfcd13625e6b))
+- **URL of Interaction**: https://chatgpt.com/share/6755f1ce-32e0-800d-93ef-dfcd13625e6b
 
 ## DOM Interaction
 - **Dynamic Updates**: Leveraged the DOM to provide real-time feedback and enhance interactivity.
@@ -89,20 +85,17 @@
          button.onclick = () => checkAnswer(index, questionData.answer);
      });
      ```
-     **Purpose**: Dynamically updates the question and options based on the current stage.
+  
 
   2. **Real-Time Distance Display**:
      ```javascript
      document.getElementById("distance-info").innerText = `Distance: ${Math.round(distance)} meters`;
      ```
-     **Purpose**: Provides the player with real-time feedback during the final stage.
-
+  
   3. **Timer Display**:
      ```javascript
      document.getElementById("timer").innerText = `Time Left: ${timeLeft}s`;
      ```
-     **Purpose**: Keeps players informed about the remaining time in the final stage.
-
 
 ## Game Overview
 
