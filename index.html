@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Agent Game</title>
+    <!-- CSS Dosyaları -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="final-stage.css">
+
+    <!-- Leaflet Harita CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Arkaplan Video -->
+    <div id="background-video">
+        <video autoplay muted loop>
+            <source src="openingvideo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Oyun Konteyneri -->
+    <div id="game-container">
+        <!-- Aşama Göstergesi -->
+        <div id="stage-indicator" style="display: none;">Stage 1</div>
+
+        <!-- Başlangıç Ekranı -->
+        <div id="start-screen" class="screen">
+            <h1>Welcome to Find the Agent!</h1>
+            <button id="start-game-button" onclick="startGame()">Start Game</button>
+            <button id="how-to-play-button" onclick="showRules()">How to Play</button>
+        </div>
+
+        <!-- Soru Ekranı -->
+        <div id="question-screen" class="screen" style="display: none;">
+            <div id="image-container">
+                <img id="question-image" src="" alt="Question Image" style="display: none;">
+            </div>
+            <h2 id="question-text">This country is famous for...</h2>
+            <div id="options">
+                <button class="option-button">Option 1</button>
+                <button class="option-button">Option 2</button>
+                <button class="option-button">Option 3</button>
+                <button class="option-button">Option 4</button>
+            </div>
+            <p id="lives">Lives Remaining: 3</p>
+        </div>
+
+        <!-- Loading Ekranı -->
+        <div id="loading-screen" class="screen" style="display: none;">
+            <video id="loading-video" autoplay muted>
+                <source src="loading.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Final Stage -->
+        <div id="final-stage" class="screen" style="display: none;">
+            <div id="map"></div>
+            <div id="distance-info">Distance to Agent: <span id="distance">500+</span> meters</div>
+            <div id="timer">Time Left: <span id="time-left">1:00</span></div>
+        </div>
+
+        <!-- Game Over Ekranı -->
+        <div id="game-over-screen" class="screen" style="display: none;">
+            <h2 id="game-over-text">GAME OVER<br>You failed to catch the agent.</h2>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+
+        <!-- Sonuç Ekranı -->
+        <div id="result-screen" class="screen" style="display: none;">
+            <h2 id="result-text">Congratulations! You caught the agent!</h2>
+            <button onclick="startGame()">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Leaflet Harita JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <!-- Oyun JS Dosyaları -->
+    <script src="script.js"></script>
+    <script src="final-stage.js"></script>
+</body>
+</html>
